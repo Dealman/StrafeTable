@@ -145,11 +145,11 @@ function JTACAutoLase(jtacGroupName, laserCode,smoke,lock,colour)
         local tempUnitInfo = GLOBAL_JTAC_CURRENT_TARGETS[jtacGroupName]
         local tempUnit = Unit.getByName(tempUnitInfo.name)
 
-        if tempUnit ~= nil and tempUnit:getLife() > 0 and tempUnit:isActive() == true then
-            notify(jtacGroupName .. " target " .. tempUnitInfo.unitType .. " lost. Scanning for targets. ", 10)
+        --if tempUnit ~= nil and tempUnit:getLife() > 0 and tempUnit:isActive() == true then
+        --    notify(jtacGroupName .. " target " .. tempUnitInfo.unitType .. " lost. Scanning for targets. ", 10)
         -- else
-            notify(jtacGroupName .. " Kill Confirmed: " .. tempUnitInfo.unitType .. "  Scanning for new targets. ", 10)
-        end
+        --    notify(jtacGroupName .. " Kill Confirmed: " .. tempUnitInfo.unitType .. "  Scanning for new targets. ", 10)
+        --end
         --remove from smoke list
         GLOBAL_JTAC_SMOKE[tempUnitInfo.name] = nil
         -- remove from target list
@@ -165,8 +165,8 @@ function JTACAutoLase(jtacGroupName, laserCode,smoke,lock,colour)
             GLOBAL_JTAC_CURRENT_TARGETS[jtacGroupName] = { name = enemyUnit:getName(), unitType = enemyUnit:getTypeName(), unitId = enemyUnit:getID() }
             
             -- Add some spacing between the group name and the ID number
-            local fixedJTACGroupName = jtacGroupName:gsub("#", " #")
-            notify(fixedJTACGroupName .. ' | Laser Code: ' .. laserCode .. " | New Target: " .. enemyUnit:getTypeName() .. getPositionString(enemyUnit) .. heightString(enemyUnit) , 10)
+            --local fixedJTACGroupName = jtacGroupName:gsub("#", " #")
+            --notify(fixedJTACGroupName .. ' | Laser Code: ' .. laserCode .. " | New Target: " .. enemyUnit:getTypeName() .. getPositionString(enemyUnit) .. heightString(enemyUnit) , 10)
 
             -- create smoke
             if smoke == true then

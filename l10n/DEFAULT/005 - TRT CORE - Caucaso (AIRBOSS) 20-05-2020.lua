@@ -306,9 +306,9 @@ if enable_A2G_tasking == true then
       local RNGzone1 = math.random(1,#(TemplateZones))
       local tempRandGroup1 = math.random(1,#(TemplateBAI))
       local tempGrpAlias1 = "✧ BAI" .. RngNum
-      trigger.action.outText("MISSION UPDATE: New BAI task available",15)
-      NEWBAI = USERSOUND:New( "TransmisionEntrante.ogg" )
-      NEWBAI:ToCoalition( coalition.side.BLUE )
+      trigger.action.outText("MISSION UPDATE: New Battlefield Air Interdiction(BAI) Task is Available!", 5)
+      --NEWBAI = USERSOUND:New( "TransmisionEntrante.ogg" )
+      --NEWBAI:ToCoalition( coalition.side.BLUE )
       
       BAI[RngNum] = SPAWN:NewWithAlias(TemplateBAI[tempRandGroup1], tempGrpAlias1)
         :OnSpawnGroup(
@@ -334,9 +334,9 @@ if enable_A2G_tasking == true then
       local RNGzone4 = math.random(1,#(TemplateZones))
       local tempRandGroup4 = math.random(1,#(TemplateBAIHARD))
       local tempGrpAlias4 = "☠ BAI " .. RngNum
-      trigger.action.outText("MISSION UPDATE: New BAI -Hard- task available",15)
-      NEWBAIHARD = USERSOUND:New( "TransmisionEntrante.ogg" )
-      NEWBAIHARD:ToCoalition( coalition.side.BLUE )
+      trigger.action.outText("MISSION UPDATE: New Hard Battlefield Air Interdiction(BAI) Task is Available!", 5)
+      --NEWBAIHARD = USERSOUND:New( "TransmisionEntrante.ogg" )
+      --NEWBAIHARD:ToCoalition( coalition.side.BLUE )
       
       BAIHARD[RngNum] = SPAWN:NewWithAlias(TemplateBAIHARD[tempRandGroup4], tempGrpAlias4)
         :OnSpawnGroup(
@@ -361,9 +361,9 @@ if enable_A2G_tasking == true then
       local RNGzone2 = math.random(1,#(TemplateNavalZones))
       local tempRandGroup3 = math.random(1,#(TemplateNavBAI))
       local tempGrpAlias3 = "⚓ NAVAL " .. RngNum
-      trigger.action.outText("MISSION UPDATE: New ANTI SHIP task available",15)
-      NEWBAIAS = USERSOUND:New( "TransmisionEntrante.ogg" )
-      NEWBAIAS:ToCoalition( coalition.side.BLUE )
+      trigger.action.outText("MISSION UPDATE: New Anti-Ship Task is Available!", 5)
+      --NEWBAIAS = USERSOUND:New( "TransmisionEntrante.ogg" )
+      --NEWBAIAS:ToCoalition( coalition.side.BLUE )
       
       NavBAI[RngNum] = SPAWN:NewWithAlias(TemplateNavBAI[tempRandGroup3], tempGrpAlias3)
       :SpawnInZone(TemplateNavalZones[RNGzone2],true)
@@ -381,9 +381,9 @@ if enable_A2G_tasking == true then
       local RNGzone3 = math.random(1,#(TemplateZones))
       local tempRandGroup2 = math.random(1,#(SEAD_GROUPS))
       local tempGrpAlias2 = "✦ SEAD" .. RngNum
-      trigger.action.outText("MISSION UPDATE: New SEAD task available",15)
-      NEWSEAD = USERSOUND:New( "TransmisionEntrante.ogg" )
-      NEWSEAD:ToCoalition( coalition.side.BLUE )
+      trigger.action.outText("MISSION UPDATE: New SEAD Task is Available", 5)
+      --NEWSEAD = USERSOUND:New( "TransmisionEntrante.ogg" )
+      --NEWSEAD:ToCoalition( coalition.side.BLUE )
       
       SEAD[RngNum] = SPAWN:NewWithAlias(SEAD_GROUPS[tempRandGroup2], tempGrpAlias2)
         :OnSpawnGroup(
@@ -1286,6 +1286,6 @@ function ANTISHIPViggen()
   ANTISHIPViggen = SPAWN:New('☮ Viggen AntiShip'):InitCleanUp(60):InitLimit(2, 0):Spawn()
 end
 
-trigger.action.outText("▁ ▂ ▄ ▅ ▆ ▇ █ THE ROUND TABLE █ ▇ ▆ ▅ ▄ ▂ ▁", 90)
-trigger.action.outText("EN: CHECK YOUR MISSION CONFIG VIA RADIO MENU: Mission Options > Current Mission Settings & Mission Options > Active SQDN List -", 30)
-trigger.action.outText("EN: DON'T DESTROY GROUND UNITS WITHOUT JOINING A TASK OR THEY WONT REGENERATE - JOIN TAKS, ALWAYS -", 30)
+trigger.action.outText("Welcome to Strafe Haven!", 30)
+trigger.action.outText("Mission Options: Mission Options > Current Mission Settings & Mission Options", 30)
+trigger.action.outText("Warning! Join a Task Before Destroying its Ground Targets!", 30)

@@ -381,7 +381,7 @@ if enable_A2G_tasking == true then
       local RNGzone3 = math.random(1,#(TemplateZones))
       local tempRandGroup2 = math.random(1,#(SEAD_GROUPS))
       local tempGrpAlias2 = "✦ SEAD" .. RngNum
-      trigger.action.outText("MISSION UPDATE: New SEAD Task is Available", 5)
+      trigger.action.outText("MISSION UPDATE: New Suppression of Air Defense(SEAD) Task is Available", 5)
       --NEWSEAD = USERSOUND:New( "TransmisionEntrante.ogg" )
       --NEWSEAD:ToCoalition( coalition.side.BLUE )
       
@@ -581,7 +581,7 @@ function MakeTaskBAIHARD_menucmd()
     local RNGzone3 = math.random(1,#(TemplateZones))
     local tempRandGroup2 = math.random(1,#(SEAD_GROUPS))
     local tempGrpAlias2 = "✦ SEAD" .. RngNum
-    trigger.action.outText("MISSION UPDATE: New SEAD task available",15)
+    trigger.action.outText("MISSION UPDATE: New Suppression of Air Defense(SEAD) task available",15)
     NEWSEAD = USERSOUND:New( "TransmisionEntrante.ogg" )
     NEWSEAD:ToCoalition( coalition.side.BLUE )
     
